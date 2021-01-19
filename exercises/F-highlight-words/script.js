@@ -4,14 +4,15 @@ function highlightWords(paragraph, colours) {
 
   // p tag along with a text of paragraph is created and appended to the div content
   let p = document.createElement('p');
-  let text = document.createTextNode(paragraph);
+  let text = document.createTextNode('');
   p.appendChild(text);
-  p.style.fontSize = '2.5rem';
+  p.style.fontSize = '2rem';
   content.appendChild(p);
   
   // select tag is created and appended to the div element
   let select = document.createElement('select');
   content.appendChild(select);
+  select.style.fontSize = '1.5rem';
   
   // option tags are created and appended to select
   colours.forEach(function(item){
@@ -22,9 +23,9 @@ function highlightWords(paragraph, colours) {
   }) 
   // The paragraph is split to create multiple spans
   let words = paragraph.split(' ');
-  words.forEach(function(element) {
+  words.forEach(function(word) {
      let span = document.createElement('span');
-     let text3 = document.createTextNode(element + ' ');
+     let text3 = document.createTextNode(word + ' ');
      span.appendChild(text3);
      p.appendChild(span);
      
