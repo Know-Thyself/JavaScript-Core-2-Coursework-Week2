@@ -1,5 +1,31 @@
 function todoList(todos) {
   // Write your code here...
+  let content = document.querySelector('#content');
+
+  let ul = document.createElement('ul');
+  content.appendChild(ul);
+
+  let needToDo = todos.map(element => element.todo);
+  needToDo.forEach(element => {
+  let li = document.createElement('li');
+  ul.appendChild(li);
+
+  let text = document.createTextNode(element);
+  li.appendChild(text);
+  li.style.fontSize = '2.5rem';
+
+  let whenClicked = function() {
+     if(li.style.backgroundColor != 'green') {
+      li.style.backgroundColor = 'green';
+    } else if (li.style.backgroundColor = 'green') {
+      li.style.backgroundColor = 'white';
+    }
+  }
+
+  li.addEventListener('click', whenClicked);
+    
+  });
+
 }
 
 const todos = [
