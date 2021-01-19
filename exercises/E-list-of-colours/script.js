@@ -1,7 +1,7 @@
 function listOfColours(colours) {
   // Write your code here...
   let content = document.querySelector('#content');
-  let select = document.createElement('select')
+  let select = document.createElement('select');
   content.appendChild(select);
   
   // ForEach method is used to iterate through the array to populate p with a list of colours as well as options.
