@@ -32,7 +32,11 @@ function highlightWords(paragraph, colours) {
     // A callback function is created to check the value of the select option to be used as a background color to be initiated later by the event listener.
     let singleSpan = function () {
        document.getElementsByTagName('select').value;
-       span.style.backgroundColor = select.value;
+       if (select.value !='none') {
+         span.style.backgroundColor = select.value;
+       } else if (select.value = 'none'){
+         span.style.backgroundColor = null;
+       }
     }
      
      // Refers to the callback function when a user clicks on a word.
