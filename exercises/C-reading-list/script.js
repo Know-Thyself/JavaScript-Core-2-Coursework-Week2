@@ -1,6 +1,9 @@
 function readingList(books) {
   // Write your code here...
   let content = document.querySelector('#content');
+  content.style.display = 'flex';
+  content.style.justifyContent = 'space-evenly';
+  content.style.width = '100vw';
 
   let ul = document.createElement('ul');
   content.appendChild(ul);
@@ -9,6 +12,12 @@ function readingList(books) {
 
   titleAndAuthor.forEach(function(item){
   let li = document.createElement('li');
+  li.style.display = 'inline-block';
+  li.style.textAlign = 'center';
+  li.style.width = '30vw';
+  li.style.margin = '10px';
+  li.style.fontSize = '2rem';
+  li.style.color = 'white';
   ul.appendChild(li);
 
   let p = document.createElement('p');
@@ -53,7 +62,5 @@ const books = [
     alreadyRead: true
   }
 ];
-
-
 
 readingList(books);
