@@ -35,13 +35,14 @@ function readingList(books) {
  newImg[1].src = booksImages[1];
  newImg[2].src = booksImages[2];
 
-
+// The colors are chosen based on whether or not I have read the books.
 let list = document.getElementsByTagName('li');
 list[0].style.backgroundColor = 'green';
 list[1].style.backgroundColor = 'red';
 list[2].style.backgroundColor = 'red';
 }
 
+// Created an array of url links that I have found from creative commons.
 const booksImages = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjNubQYPNSS-DplWUtdg4hc6PmgIdWaqaABTSEeQSPcJIcckjo9OKmhAlug_rw3D-31wFPI-M&usqp=CAc', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-f41Ys8egAHLYj6_NyOlBaBTH43i4bzgkgPpPi6aY1Vk9K78&usqp=CAc','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMwuRGcBdhppeVmH71k5RnRjeSbm3S3qU48o7oSqQXiD84wpkkqTbA36gR-Q&usqp=CAc']
 
 
